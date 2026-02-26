@@ -18,14 +18,14 @@ This repo contains a cron-friendly DB maintenance script:
 ## Command for Bifrost Cron Job (GitHub source)
 
 ```bash
-pip3 install --no-cache-dir -r requirements.txt && python3 jobs/db_maintenance.py
+sh jobs/run_db_maintenance.sh
 ```
 
 ## Root Path guidance
 
 - If `root_path = .`:
-  - command should include subfolder path:
-    - `python3 jobs/db_maintenance.py`
-- If script is inside `jobs/` and you set `root_path = jobs`:
+  - use:
+    - `sh jobs/run_db_maintenance.sh`
+- If you set `root_path = jobs`:
   - command becomes:
-    - `python3 db_maintenance.py`
+    - `sh run_db_maintenance.sh`
